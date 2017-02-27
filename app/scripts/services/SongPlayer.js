@@ -1,12 +1,12 @@
 (function() {
-    function SongPlayer() {
+    function SongPlayer(Fixtures) {
         var SongPlayer = {};
 
         /**
-         * @desc Currently Playing Song
+         * @desc holds album currently on the page
          * @type {Object}
          */
-        var currentSong = null;
+        var currentAlbum = Fixtures.getAlbum();
 
         /**
          * @desc Buzz object audio file
@@ -32,7 +32,7 @@
         var setSong = function(song) {
             if (currentBuzzObject) {
                 currentBuzzObject.stop();
-                currentSong.playing = null;
+                SongPlayer.currentSong.playing = null;
             }
 
             currentBuzzObject = new buzz.sound(song.audioUrl, {
@@ -40,23 +40,42 @@
                 preload: true
             });
 
-            currentSong = song;
+            SongPlayer.currentSong = song;
         };
 
         /**
+         * @function getSongIndex
+         * @desc retrieves index of song
+         * @param {Object} song
+         * @returns {number}
+         */
+        var getSongIndex = function(song) {
+            return currentAlbum.songs.indexOf(song);
+        };
+
+        /**
+         * @desc Currently Playing Song
+         * @type {Object}
+         */
+        SongPlayer.currentSong = null;
+
+
+        /**
          * @function SongPlayer.play
-         * @desc Evaluates status of currentSong
+         * @desc Evaluates status of SongPlayer.currentSong
          * @param {Object} song
          */
         SongPlayer.play = function(song){
-          if(currentSong !== song){
+            song = song || SongPlayer.currentSong;
+
+            if(SongPlayer.currentSong !== song){
               setSong(song);
               playSong(song);
-          } else if (currentSong === song){
+            } else if (SongPlayer.currentSong === song){
               if(currentBuzzObject.isPaused()){
                   currentBuzzObject.play();
               }
-          }
+            }
         };
 
         /**
@@ -65,8 +84,28 @@
          * @param {Object} song
          */
         SongPlayer.pause = function (song) {
+            song = song || SongPlayer.currentSong;
             currentBuzzObject.pause();
             song.playing = false;
+        };
+
+        /**
+         * @function SongPlayer.previous
+         * @desc moves current song to preious track
+         */
+        SongPlayer.previous = function(){
+            var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+            currentSongIndex--;
+
+            if(currentSongIndex < 0){
+                currentBuzzObject.stop();
+                SongPlayer.currentSong.playing = null;
+            }else{
+                var song = currentAlbum.songs[currentSongIndex];
+                setSong(song);
+                playSong(song);
+            }
+
         };
 
         return SongPlayer;
@@ -74,5 +113,5 @@
 
     angular
         .module('blocJams')
-        .factory('SongPlayer', SongPlayer);
+        .factory('SongPlayer', ['Fixtures', SongPlayer]);
 })();
