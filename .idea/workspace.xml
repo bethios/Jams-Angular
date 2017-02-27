@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2f2ba2a3-8fba-498e-80c8-947964506445" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/index.html" afterPath="$PROJECT_DIR$/app/pages/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/services/SongPlayer.js" afterPath="$PROJECT_DIR$/app/scripts/services/SongPlayer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/player_bar.html" afterPath="$PROJECT_DIR$/app/templates/player_bar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/scripts/services/SongPlayer.js" afterPath="$PROJECT_DIR$/dist/scripts/services/SongPlayer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/templates/player_bar.html" afterPath="$PROJECT_DIR$/dist/templates/player_bar.html" />
     </list>
@@ -56,21 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player_bar.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="player_bar.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/player_bar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="435">
+              <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SongPlayer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SongPlayer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/services/SongPlayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+            <state relative-caret-position="-1035">
+              <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -96,8 +94,8 @@
         <option value="$PROJECT_DIR$/app/templates/album.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/PlayerBarCtrl.js" />
         <option value="$PROJECT_DIR$/app/pages/index.html" />
-        <option value="$PROJECT_DIR$/app/templates/player_bar.html" />
         <option value="$PROJECT_DIR$/app/scripts/services/SongPlayer.js" />
+        <option value="$PROJECT_DIR$/app/templates/player_bar.html" />
       </list>
     </option>
   </component>
@@ -337,12 +335,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1488064857133</updated>
-      <workItem from="1488064858306" duration="11549000" />
+      <workItem from="1488064858306" duration="12721000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11549000" />
+    <option name="totallyTimeSpent" value="12721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="37" width="765" height="758" extended-state="0" />
@@ -427,22 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/PlayerBarCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/player_bar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/services/Fixtures.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
@@ -451,10 +433,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/PlayerBarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/services/SongPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="-1035">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/player_bar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding />
         </state>
       </provider>
