@@ -129,7 +129,6 @@
                 setSong(song);
                 playSong(song);
             }
-
         };
 
         /**
