@@ -68,6 +68,12 @@
         };
 
         /**
+         * @desc volume level
+         * @type {number}
+         */
+        SongPlayer.volume = 50;
+
+        /**
          * @desc Currently Playing Song
          * @type {Object}
          */
@@ -143,10 +149,27 @@
           }
         };
 
+        /**
+         * @function SongPlayer.setCurrentTime
+         * @desc sets the seek bars time to show progress
+         * @param {number} time
+         */
         SongPlayer.setCurrentTime = function(time) {
             if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
             }
+        };
+
+        /**
+         * @function SongPlayer.next
+         * @desc moves current song to next track
+         * @param {number} newVolume
+         */
+        SongPlayer.setVolume = function(newVolume){
+            if(currentBuzzObject){
+                currentBuzzObject.setVolume(newVolume);
+            }
+            SongPlayer.volume = newVolume
         };
 
         return SongPlayer;
