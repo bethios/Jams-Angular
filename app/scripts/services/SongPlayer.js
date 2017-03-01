@@ -20,6 +20,11 @@
          * @param {Object} song
          */
         var playSong = function(song){
+            if(song.skip === true){
+                SongPlayer.next();
+                return;
+            }
+
             currentBuzzObject.play();
             song.playing = true;
         };
@@ -47,7 +52,6 @@
                 formats: ['mp3'],
                 preload: true
             });
-
             currentBuzzObject.bind('timeupdate', function() {
                 $rootScope.$apply(function() {
                     SongPlayer.currentTime = currentBuzzObject.getTime();
@@ -103,14 +107,15 @@
             song = song || SongPlayer.currentSong;
 
             if(SongPlayer.currentSong !== song){
-              setSong(song);
-              playSong(song);
+                setSong(song);
+                playSong(song);
             } else if (SongPlayer.currentSong === song){
               if(currentBuzzObject.isPaused()){
                   currentBuzzObject.play();
               }
             }
         };
+
 
         /**
          * @function SongPlayer.pause
@@ -184,19 +189,21 @@
          * @desc calculates and reflects new rating info
          */
 
-        SongPlayer.newRating = function(){
-            var numberOfTotalStars = SongPlayer.currentSong.stars;
-            var numberOfRatings = SongPlayer.currentSong.numberOfRatings;
-            var currentStars = (numberOfTotalStars/numberOfRatings).toFixed(1);
+        SongPlayer.newRating = function() {
+            if (SongPlayer.currentSong) {
+                var numberOfTotalStars = SongPlayer.currentSong.stars || 0;
+                var numberOfRatings = SongPlayer.currentSong.numberOfRatings;
+                var currentStars = (numberOfTotalStars / numberOfRatings).toFixed(1);
 
-            return currentStars;
-            /*var showStars = "";
+                return currentStars;
+                /*var showStars = "";
 
-            for(var i =1; i<=currentStars; i++){
-                showStars += "<span class='ion-ios-star' ng-style='{color : yellow}'></span>"
+                 for(var i =1; i<=currentStars; i++){
+                 showStars += "<span class='ion-ios-star' ng-style='{color : yellow}'></span>"
+                 }
+                 return showStars;
+                 */
             }
-            return showStars;
-            */
         };
 
 
