@@ -14,9 +14,19 @@
     <link rel="stylesheet" type="text/css" href="/styles/player_bar.css">
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=469364900120277";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <nav class="navbar">
         <a ui-sref="landing" class="logo"><img src="assets/images/FrankieJamsOutLogo.png" alt="frankie jams logo"></a>
         <div class="links-container">
+            <div class="fb-login-button navbar-link" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
             <a ui-sref="collection" class="navbar-link">Listen</a>
         </div>
     </nav>
