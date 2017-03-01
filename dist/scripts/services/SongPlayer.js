@@ -51,9 +51,10 @@
             currentBuzzObject.bind('timeupdate', function() {
                 $rootScope.$apply(function() {
                     SongPlayer.currentTime = currentBuzzObject.getTime();
+
                 });
             });
-
+            SongPlayer.rated = null;
             SongPlayer.currentSong = song;
         };
 
@@ -78,6 +79,8 @@
          * @type {Object}
          */
         SongPlayer.currentSong = null;
+
+        SongPlayer.rated = null;
 
         /**
          * @desc Current playback time (in seconds) of currently playing song
@@ -159,9 +162,49 @@
             }
         };
 
+
         /**
-         * @function SongPlayer.next
-         * @desc moves current song to next track
+         * @function SongPlayer.muteAll
+         * @desc toggles mute on and off
+         */
+        SongPlayer.muteAll = function(){
+            if(currentBuzzObject){
+                currentBuzzObject.toggleMute();
+            }
+        };
+
+        /**
+         * @function SongPlayer.newRating
+         * @desc calculates and reflects new rating info
+         */
+
+        SongPlayer.newRating = function(){
+            var numberOfTotalStars = SongPlayer.currentSong.stars;
+            var numberOfRatings = SongPlayer.currentSong.numberOfRatings;
+            var currentStars = (numberOfTotalStars/numberOfRatings).toFixed(1);
+
+            return currentStars;
+            /*var showStars = "";
+
+            for(var i =1; i<=currentStars; i++){
+                showStars += "<span class='ion-ios-star' ng-style='{color : yellow}'></span>"
+            }
+            return showStars;
+            */
+        };
+
+
+        SongPlayer.rateSong = function(starRating){
+            SongPlayer.currentSong.numberOfRatings++;
+            SongPlayer.currentSong.stars += starRating;
+
+            SongPlayer.rated = true;
+        };
+
+
+        /**
+         * @function SongPlayer.setVolume
+         * @desc sets volume
          * @param {number} newVolume
          */
         SongPlayer.setVolume = function(newVolume){

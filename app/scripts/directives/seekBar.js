@@ -30,6 +30,7 @@
                     scope.max = newValue;
                 });
 
+
                 var percentString = function () {
                     var value = scope.value;
                     var max = scope.max;

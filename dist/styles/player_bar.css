@@ -56,7 +56,7 @@
 .player-bar .currently-playing .song-name,
 .player-bar .currently-playing .artist-song-mobile {
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.95rem;
     margin: 0;
     position: absolute;
     width: 100%;
@@ -140,7 +140,7 @@
 }
 
 .player-bar .volume .icon {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     display: inline-block;
     vertical-align: middle;
 }
@@ -149,6 +149,15 @@
     display: inline-block;
     width: 5.75rem;
     vertical-align: middle;
+}
+
+.ion-ios-star {
+    font-size: 1.5rem;
+}
+
+.ion-android-volume-off,
+.ion-android-volume-up {
+    font-size: 1.5rem;
 }
 
 @media (max-width: 640px){

@@ -20,6 +20,19 @@
         </div>
         <div class="control-group currently-playing">
             <h2 class="song-name">{{ playerBar.songPlayer.currentSong.title }}</h2>
+
+            <div class="star-rating">
+                <span ng-show="!playerBar.songPlayer.rated">
+                    <span class="ion-ios-star"  ng-click="playerBar.songPlayer.rateSong(1)"></span>
+                    <span class="ion-ios-star" ng-click="playerBar.songPlayer.rateSong(2)"></span>
+                    <span class="ion-ios-star" ng-click="playerBar.songPlayer.rateSong(3)"></span>
+                    <span class="ion-ios-star" ng-click="playerBar.songPlayer.rateSong(4)"></span>
+                </span>
+                <span ng-show="playerBar.songPlayer.rated">
+                    <p style="font-size: 10px">Community Rating is now {{playerBar.songPlayer.newRating()}} stars.</p>
+                </span>
+            </div>
+
             <h2 class="artist-song-mobile">{{ playerBar.songPlayer.currentSong.title}} - {{album.albumData.artist}}</h2>
             <h3 class="artist-name">{{ album.albumData.artist }}</h3>
             <div class="seek-control">
@@ -29,9 +42,9 @@
             </div>
         </div>
         <div class="control-group volume">
-            <span class="ion-volume-mute" ng-click="playerBar.songPlayer.setVolume(0)"></span>
+            <span class="icon ion-android-volume-off" ng-click="playerBar.songPlayer.muteAll()"></span>
             <seek-bar value="{{ playerBar.songPlayer.volume }}" max="{{ 100 }}" on-change="playerBar.songPlayer.setVolume(value)"></seek-bar>
-            <span class="icon ion-volume-high"></span>
+            <span class="icon ion-android-volume-up"></span>
 
         </div>
     </div>
