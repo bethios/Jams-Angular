@@ -5,7 +5,7 @@ body.landing{
 .hero-content{
     position: relative;
     min-height: 600px;
-    background-image:url("../assets/images/kidWithGuitar.jpg");
+    background-image:url("../assets/images/brobots_bg.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -21,8 +21,8 @@ body.landing{
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
-    font-size: 7rem;
-    font-weight: 300;
+    font-size: 5rem;
+    font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     text-shadow: 2px 2px 0px rgb(22, 55, 140);
@@ -61,6 +61,6 @@ body.landing{
 .ion-headphone,
 .ion-mic-c,
 .ion-iphone{
-    color: lightblue;
+    color: darkslategray;
     font-size: 5rem;
 }
