@@ -160,6 +160,17 @@
     font-size: 1.5rem;
 }
 
+.ion-android-volume-off:hover{
+    cursor: hand;
+}
+
+.ion-android-volume-off:active{
+    background-color: white;
+    border-radius: 50%;
+    color: gray;
+    padding: 5px;
+}
+
 @media (max-width: 640px){
     .player-bar{
         padding: 1rem;
