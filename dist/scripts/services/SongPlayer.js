@@ -70,6 +70,7 @@
                   currentBuzzObject.play();
               }
             }
+            song.playing = true;
         };
 
         SongPlayer.pause = function (song) {
