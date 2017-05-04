@@ -40,7 +40,7 @@ html{
 }
 
 body{
-    background-image: url("../assets/images/blurred_backgrounds/blur_bg_3.jpg");
+    background-image: url("../assets/images/blurred_backgrounds/brown-ppt-background-1.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -54,16 +54,26 @@ body{
 
 .navbar{
     position: relative;
-    padding: 0.5rem;
-    background-color: rgb(86, 39, 78);
+    padding: 1rem;
+    background-color: #2D1701;
     z-index: 1;
-    border-bottom: solid dimgray 2px;
+    border-bottom: solid #057367 2px;
 }
 
 .navbar .logo {
+    font-family: 'Anton';
     position: relative;
     left: 2rem;
     cursor: pointer;
+    color: white;
+    font-size: 2em;
+    text-transform: full-width;
+    width: 10vh;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    margin: 15px;
 }
 
 .navbar .links-container{
