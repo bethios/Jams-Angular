@@ -4,21 +4,16 @@ body.landing{
 
 .hero-content{
     position: relative;
-    min-height: 600px;
+    height: 75vh;
     background-image:url("../assets/images/joe griffin2.jpg");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     background-size: cover;
     border-bottom: solid dimgray 2px;
 
 }
 
-.hero-content .hero-title {
-    position: absolute;
-    top: 60%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
+.hero-title {
     width: 100%;
     text-align: center;
     font-size: 5rem;
@@ -28,7 +23,7 @@ body.landing{
     text-shadow: 2px 2px 0px rgb(22, 55, 140);
     font-family: 'Anton';
     color: #F9F3EE;
-
+    margin-bottom: 0px;
 }
 
 .review{

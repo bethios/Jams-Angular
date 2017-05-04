@@ -1,3 +1,7 @@
+.album-view{
+    margin: 20px;
+}
+
 .album-cover-art{
     position: relative;
     margin-top: 1rem;
@@ -9,12 +13,10 @@
     font-size: 120%;
     font-weight: 500;
     align-self: start;
-    margin: auto;
     padding-left: 10vw;
 }
 
 .album-view-details{
-    position: relative;
     top: 1rem;
     margin: 5px;
 }
