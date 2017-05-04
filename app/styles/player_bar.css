@@ -207,4 +207,9 @@
     .player-bar .currently-playing .artist-song-mobile{
         display: block;
     }
+
+    .star-rating{
+        display:none;
+    }
+
 }

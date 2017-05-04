@@ -1,15 +1,15 @@
 <main class="album-view container narrow">
-    <section class="clearfix">
-        <div class="column half">
+    <section class="album-display">
+        <div>
             <img src="{{album.albumData.albumArtUrl}}" class="album-cover-art">
         </div>
-        <div class="album-view-details column half">
+        <div class="album-view-details">
             <h2 class="album-view-title">{{ album.albumData.title }}</h2>
             <h3 class="album-view-artist">{{ album.albumData.artist }}</h3>
-            <h5 class="album-view-release-info">{{ album.albumData.label }}  {{ album.albumData.year }}</h5>
+            <h5 id="album-view-release-info">{{ album.albumData.label }}  {{ album.albumData.year }}</h5>
         </div>
     </section>
-    <table class="album-view-song-list">
+    <table class="album-view-song-list album-display">
         <tr class="album-view-song-item" ng-style="fadeOut" ng-repeat="song in album.albumData.songs" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
             <td class="song-item-number">
                 <span ng-show="!song.playing && !hovered && !song.skip">{{ $index + 1 }}</span>

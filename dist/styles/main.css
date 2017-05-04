@@ -25,15 +25,6 @@
     html {font-size: 120%; }
 }
 
-.container{
-    margin: 0 auto;
-    max-width: 64rem;
-}
-
-.container.narrow{
-    max-width: 56rem;
-}
-
 html{
     height: 100%;
     font-size:100%;
@@ -48,7 +39,7 @@ body{
     font-family: 'Open Sans';
     color: white;
     min-height: 100%;
-    padding-bottom: 200px;
+    padding-bottom: 250px;
 
 }
 
@@ -122,3 +113,21 @@ body{
 .clearfix::after{
     clear: both;
 }
+
+
+.container {
+    display: grid;
+    grid-template-columns: 45vw 40vw;
+    margin: auto;
+    padding-top: 50px;
+    grid-gap: 15px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 500px){
+    .container{
+        display: block;
+    }
+}
+

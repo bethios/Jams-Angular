@@ -1,33 +1,46 @@
 .album-cover-art{
     position: relative;
-    left: 20%;
     margin-top: 1rem;
-    width: 60%;
+    max-width: 90%;
+}
+
+.album-display{
+    font-family: "Open Sans";
+    font-size: 120%;
+    font-weight: 500;
+    align-self: start;
+    margin: auto;
+    padding-left: 10vw;
 }
 
 .album-view-details{
     position: relative;
-    top: 1.5rem;
-    padding: 1rem;
+    top: 1rem;
+    margin: 5px;
 }
 
 .album-view-details .album-view-title{
     font-weight: 300;
     font-size: 2rem;
+    margin: 5px;
+
 }
 
 .album-view-details .album-view-artist{
     font-weight: 300;
     font-size: 1.5rem;
+    margin: 10px;
+
 }
 
-.album-view details .album-view-release-info{
+#album-view-release-info{
     font-weight: 400;
     font-size: 0.75rem;
+    margin: 5px;
 }
 
 .album-view-song-list{
-    width: 90%;
+    width: 100%;
     margin: 1.5rem auto;
     letter-spacing: 0.05rem;
     font-size: 0.85rem;
@@ -50,6 +63,7 @@
 
 .song-item-duration {
     width: 5%;
+    padding-left: 1em;
 }
 
 .album-song-button {
